@@ -5,12 +5,12 @@ import { VisController } from './button_vis_controller';
 
 import { CATEGORY } from 'ui/vis/vis_category';
 import { VisFactoryProvider } from 'ui/vis/vis_factory';
+import { Schemas } from 'ui/vis/editors/default/schemas';
 import { VisTypesRegistryProvider } from 'ui/registry/vis_types';
 import { VisSchemasProvider } from 'ui/vis/editors/default/schemas';
 
 function ButtonVisProvider(Private) {
   const VisFactory = Private(VisFactoryProvider);
-  const Schemas = Private(VisSchemasProvider);
 
   return VisFactory.createBaseVisualization({
     name: 'button_vis',
@@ -21,10 +21,10 @@ function ButtonVisProvider(Private) {
     visualization: VisController,
     visConfig: {
       defaults: {
-        // add default parameters
         fontSize: '30',
+        margin: '10',
         buttonTitle: 'Click me!',
-        code: '',
+        code: ' ',
       },
     },
     editorConfig: {
@@ -54,3 +54,6 @@ function ButtonVisProvider(Private) {
 
 // register the provider with the visTypes registry
 VisTypesRegistryProvider.register(ButtonVisProvider);
+
+// export the provider so that the visType can be required with Private()
+//export default ButtonVisProvider;
