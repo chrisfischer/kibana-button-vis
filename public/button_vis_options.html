@@ -1,0 +1,10 @@
+<div class="form-group">
+  <label>Font Size - {{ vis.params.fontSize }}pt</label>
+  <input type="range" ng-model="vis.params.fontSize" class="form-control" min="12" max="120" />
+  <br>
+  <label>Button Title</label>
+  <input type="text" ng-model="vis.params.buttonTitle" class="form-control" />
+  <br>
+  <label>Javascript (use \{\{value\}\}, \{\{row\}\}, and \{\{column\}\})</label>
+  <textarea ng-model="vis.params.code" class="form-control" /></textarea>
+</div>
