@@ -2,6 +2,8 @@
 
 Run arbitrary javascript on-click. Can pass in the row, column, and value to the button title and code.
 
+![screenshot](screenshot.png)
+
 
 ## development
 
